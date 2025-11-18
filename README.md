@@ -18,3 +18,8 @@ Sin embargo, la administración necesita que:
 - Las citas y servicios aplicados se repliquen.
 
 - Para poder consultar historiales clínicos desde cualquier sucursal.
+
+# Para levantar las 2 bases de datos con docker usar el comando
+
+```bash
+docker compose up -d
