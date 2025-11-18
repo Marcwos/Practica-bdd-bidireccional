@@ -15,16 +15,16 @@ services:
     command: postgres -c config_file=/etc/postgresql/postgresql.conf
 
   
-  guayaquil:
+  cuenca:
     image: postgres:17
-    container_name: guayaquil-db
+    container_name: cuenca-db
     ports:
       - "5436:5432"
     environment:
-      POSTGRES_DB: guayaquildb
+      POSTGRES_DB: cuencadb
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
-        - ./guayaquil/custom-postgresql.conf:/etc/postgresql/postgresql.conf
-        - ./guayaquil/pg_hba.conf:/etc/postgresql/pg_hba.conf
+        - ./cuenca/custom-postgresql.conf:/etc/postgresql/postgresql.conf
+        - ./cuenca/pg_hba.conf:/etc/postgresql/pg_hba.conf
     command: postgres -c config_file=/etc/postgresql/postgresql.conf
