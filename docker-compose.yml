@@ -1,0 +1,30 @@
+services:
+
+  quito:
+    image: postgres:17
+    container_name: quito-db
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_DB: quitodb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+        - ./quito/custom-postgresql.conf:/etc/postgresql/postgresql.conf
+        - ./quito/pg_hba.conf:/etc/postgresql/pg_hba.conf
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+
+  
+  guayaquil:
+    image: postgres:17
+    container_name: guayaquil-db
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_DB: guayaquildb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+        - ./guayaquil/custom-postgresql.conf:/etc/postgresql/postgresql.conf
+        - ./guayaquil/pg_hba.conf:/etc/postgresql/pg_hba.conf
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
