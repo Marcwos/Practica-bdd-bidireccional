@@ -85,3 +85,4 @@ erDiagram
     CONSULTAS ||--o{ CONSULTA_SERVICIO : incluye
     SERVICIOS ||--o{ CONSULTA_SERVICIO : aplicado_en
 ```
+# ey
